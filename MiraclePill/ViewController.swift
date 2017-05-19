@@ -10,9 +10,37 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    // Components to hide
+    @IBOutlet weak var imgvEmoji: UIImageView!
+    
+    @IBOutlet weak var lblTitle: UILabel!
+    
+    @IBOutlet weak var divider: UIView!
+    
+    @IBOutlet weak var price: UILabel!
+    
+    @IBOutlet weak var lblName: UILabel!
+    
+    @IBOutlet weak var lblStreetAdd: UILabel!
+    
+    @IBOutlet weak var lblCity: UILabel!
+    
+    @IBOutlet weak var lblState: UILabel!
+    
+    @IBOutlet weak var txtName: UITextField!
+    
+    @IBOutlet weak var txtAddress: UITextField!
+    
+    @IBOutlet weak var txtCity: UITextField!
+    
+    @IBOutlet weak var imgvSuccess: UIImageView!
+    
+    // Components needed to perform actions
     @IBOutlet weak var btnStatePicker: UIButton!
     
     @IBOutlet weak var statePicker: UIPickerView!
+    
+    @IBOutlet weak var btnBuyNow: UIButton!
     
     let states = ["Alaska", "Arkansas", "Alabama", "New York", "California", "Vermont", "Hawai"]
     
@@ -54,6 +82,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if nil != btnStatePicker {
             btnStatePicker.setTitle(states[row], for: UIControlState.normal)
             statePicker.isHidden = true
+            btnBuyNow.isHidden = false
         }
     }
     
@@ -61,6 +90,29 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         if nil != statePicker {
             statePicker.isHidden = false
         }
+    }
+    
+    @IBAction func buyNowBtnPressed(_ sender: Any) {
+        imgvEmoji.isHidden = true
+        lblTitle.isHidden = true
+        lblName.isHidden = true
+        lblCity.isHidden = true
+        lblStreetAdd.isHidden = true
+        lblState.isHidden = true
+        divider.isHidden = true
+        price.isHidden = true
+        txtCity.isHidden = true
+        txtName.isHidden = true
+        txtAddress.isHidden = true
+        btnStatePicker.isHidden = true
+        
+        if statePicker.isHidden {
+            statePicker.isHidden = true
+        }
+        
+        btnBuyNow.isHidden = true
+        // We "make" the purchase
+        imgvSuccess.isHidden = false
     }
 
 }

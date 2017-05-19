@@ -22,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-6g-iX4">
-                                <rect key="frame" x="1" y="20" width="374" height="639"/>
-                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="m7D-go-Mee">
                                 <rect key="frame" x="133.5" y="42" width="105" height="101"/>
                                 <constraints>
@@ -183,6 +180,24 @@
                                     <constraint firstAttribute="height" constant="155" id="xm3-Rt-biq"/>
                                 </constraints>
                             </pickerView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="TMf-Ig-cPD">
+                                <rect key="frame" x="1" y="15" width="374" height="652"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2z-xl-SUa">
+                                <rect key="frame" x="102" y="497" width="171" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="323" id="6Sa-Xh-iWr"/>
+                                    <constraint firstAttribute="height" constant="50" id="WDl-0I-LeQ"/>
+                                    <constraint firstAttribute="width" constant="171" id="WIf-c0-cOr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="oAU-7o-XV5"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="rWn-Cu-HVr"/>
+                                </constraints>
+                                <state key="normal" title="Choose your state..." image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="buyNowBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viF-oy-BRQ"/>
+                                    <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcb-Mk-mPM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -198,11 +213,10 @@
                             <constraint firstItem="fnb-J4-uPq" firstAttribute="top" secondItem="0Cn-kI-yFZ" secondAttribute="bottom" constant="8" id="7v5-7w-oFq"/>
                             <constraint firstItem="uXu-NF-dpY" firstAttribute="trailing" secondItem="tsG-hs-9iT" secondAttribute="trailing" id="C5C-KK-HOI"/>
                             <constraint firstItem="cp6-Yb-tED" firstAttribute="centerX" secondItem="mf3-eF-09P" secondAttribute="centerX" id="CFJ-ae-7ig"/>
+                            <constraint firstItem="Z2z-xl-SUa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CfP-Sm-5K6"/>
                             <constraint firstItem="n2a-Uj-nLX" firstAttribute="trailing" secondItem="fnb-J4-uPq" secondAttribute="trailing" id="Dv8-9J-h9u"/>
                             <constraint firstItem="ccR-rg-uca" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="F3Y-UL-ZcM"/>
                             <constraint firstItem="H6E-dZ-zd9" firstAttribute="top" secondItem="m7D-go-Mee" secondAttribute="bottom" constant="25" id="Gbf-ZI-fVg"/>
-                            <constraint firstItem="E3C-6g-iX4" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="GlG-C0-N1o"/>
-                            <constraint firstItem="E3C-6g-iX4" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ICp-Qf-9jc"/>
                             <constraint firstItem="q2x-qv-BaV" firstAttribute="top" secondItem="uXu-NF-dpY" secondAttribute="bottom" constant="8" id="JxY-Ec-l0v"/>
                             <constraint firstAttribute="trailing" secondItem="ccR-rg-uca" secondAttribute="trailing" constant="20" id="Jxt-fc-9Yh"/>
                             <constraint firstItem="m7D-go-Mee" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="Ldk-Wo-P78"/>
@@ -210,7 +224,9 @@
                             <constraint firstItem="tsG-hs-9iT" firstAttribute="trailing" secondItem="U6G-Pn-x9Y" secondAttribute="trailing" id="Qup-aV-6fR"/>
                             <constraint firstItem="ccR-rg-uca" firstAttribute="top" secondItem="cV9-fo-eay" secondAttribute="top" id="RnR-9u-H6T"/>
                             <constraint firstItem="n2a-Uj-nLX" firstAttribute="leading" secondItem="fnb-J4-uPq" secondAttribute="leading" id="RpJ-ns-XkW"/>
+                            <constraint firstItem="Z2z-xl-SUa" firstAttribute="top" secondItem="cV9-fo-eay" secondAttribute="bottom" constant="8" id="ShA-t5-9xW"/>
                             <constraint firstItem="H6E-dZ-zd9" firstAttribute="centerX" secondItem="m7D-go-Mee" secondAttribute="centerX" id="TrG-lm-eum"/>
+                            <constraint firstItem="TMf-Ig-cPD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="WeP-Bw-Ba4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cp6-Yb-tED" secondAttribute="trailing" constant="20" id="YgP-mv-wuO"/>
                             <constraint firstItem="U6G-Pn-x9Y" firstAttribute="trailing" secondItem="cp6-Yb-tED" secondAttribute="trailing" id="YnS-kN-kzj"/>
                             <constraint firstItem="m7D-go-Mee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aCM-yO-5Oo"/>
@@ -220,6 +236,7 @@
                             <constraint firstItem="uXu-NF-dpY" firstAttribute="top" secondItem="tsG-hs-9iT" secondAttribute="bottom" constant="8" id="gjY-dY-cpn"/>
                             <constraint firstItem="q2x-qv-BaV" firstAttribute="trailing" secondItem="uXu-NF-dpY" secondAttribute="trailing" id="iap-bp-HES"/>
                             <constraint firstItem="tsG-hs-9iT" firstAttribute="top" secondItem="U6G-Pn-x9Y" secondAttribute="bottom" constant="8" id="ijF-Oy-LiS"/>
+                            <constraint firstItem="TMf-Ig-cPD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="m0k-BY-E15"/>
                             <constraint firstItem="ccR-rg-uca" firstAttribute="top" secondItem="cV9-fo-eay" secondAttribute="bottom" constant="8" id="obV-7m-acd"/>
                             <constraint firstItem="0Cn-kI-yFZ" firstAttribute="leading" secondItem="q2x-qv-BaV" secondAttribute="leading" id="qkJ-nR-Tpg"/>
                             <constraint firstItem="0Cn-kI-yFZ" firstAttribute="top" secondItem="q2x-qv-BaV" secondAttribute="bottom" constant="8" id="qr6-Xo-eG2"/>
@@ -233,8 +250,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBuyNow" destination="Z2z-xl-SUa" id="QMw-4q-9E7"/>
                         <outlet property="btnStatePicker" destination="cV9-fo-eay" id="6SL-zE-J8U"/>
+                        <outlet property="divider" destination="cp6-Yb-tED" id="JIu-hf-IwG"/>
+                        <outlet property="imgvEmoji" destination="m7D-go-Mee" id="YuU-Wr-EB9"/>
+                        <outlet property="imgvSuccess" destination="TMf-Ig-cPD" id="B5T-DM-3SF"/>
+                        <outlet property="lblCity" destination="0Cn-kI-yFZ" id="Bbn-1o-kXz"/>
+                        <outlet property="lblName" destination="U6G-Pn-x9Y" id="Ydi-5J-hKr"/>
+                        <outlet property="lblState" destination="n2a-Uj-nLX" id="ViB-5y-8wG"/>
+                        <outlet property="lblStreetAdd" destination="uXu-NF-dpY" id="iOE-EP-HSW"/>
+                        <outlet property="lblTitle" destination="H6E-dZ-zd9" id="Gmj-0K-pvj"/>
+                        <outlet property="price" destination="mf3-eF-09P" id="C5t-Re-Qac"/>
                         <outlet property="statePicker" destination="ccR-rg-uca" id="Uxr-Fr-tP6"/>
+                        <outlet property="txtAddress" destination="q2x-qv-BaV" id="a83-uk-XPQ"/>
+                        <outlet property="txtCity" destination="fnb-J4-uPq" id="dBb-ik-HHv"/>
+                        <outlet property="txtName" destination="tsG-hs-9iT" id="Te9-1x-9On"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -243,6 +273,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
